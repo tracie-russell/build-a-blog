@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for blog in blog_posts %}
+  <div class="blog">
+    <div class="blog-title"><a href='/blog/{{blog.key().id()}}'>{{blog.title}}</a></div>
+    <div class="blog-body">{{blog.blog}}</div>
+    <hr>
+  </div>
+{%endfor%}
+<hr>
+<a href = '/new-posts'>Submit a new blog post</a>
+
+{%endblock%}
